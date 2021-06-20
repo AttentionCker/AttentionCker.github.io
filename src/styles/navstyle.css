@@ -50,11 +50,17 @@
 
 .content-grid {
     display: grid;
-    height: 500vh;
-    grid-template-rows: repeat(5, 100vh);
-    grid-auto-flow: column;
+    height: 100vh;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    /* grid-template-rows: repeat(5, 100vh); */
+    grid-auto-flow: rows;
     grid-row: 1;
     grid-column-start: 2;
+}
+
+.lorem-ipsum {
+    margin-left: 20px;
 }
 
 h1 {
@@ -70,6 +76,16 @@ h1 {
     font-family: Montserrat;
     height: 100vh;
     margin-left: 30px;
+}
+
+.snappy-scroll-container {
+    scroll-snap-type: y mandatory;
+}
+
+.snappy-scroll-item {
+    padding-top: 60px;
+    padding-bottom: 150px;
+    scroll-snap-align: start;
 }
 
 
@@ -99,11 +115,9 @@ p {
     top: 0;
     left: 0;
     background: white;
-    /* border-width: 1px; */
-    /* border-style: solid; */
     margin-left: 20%;
     border-radius: 20px 0px 0px 20px;
-    transition-duration: 0.45s;
+    transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.2);
 }
 
