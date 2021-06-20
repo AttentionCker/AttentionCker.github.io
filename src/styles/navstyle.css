@@ -1,0 +1,153 @@
+/* GLOBAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border-width: 1px; */
+    /* border-style: solid; */
+    /* border-color: rgb(49, 232, 245); */
+}
+
+
+/* classes */
+
+.hidden {
+    visibility: hidden;
+}
+
+.main-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 5vw auto;
+}
+
+.sidenav {
+    display: grid;
+    height: 100vh;
+    width: 5vw;
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: column;
+    position: fixed;
+}
+
+.sidenav-element {
+    background: lightblue;
+}
+
+.sidenav-element>span {
+    display: inline-block;
+    position: relative;
+    transform-origin: center center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.fas {
+    text-align: center;
+}
+
+.content-grid {
+    display: grid;
+    height: 500vh;
+    grid-template-rows: repeat(5, 100vh);
+    grid-auto-flow: column;
+    grid-row: 1;
+    grid-column-start: 2;
+}
+
+h1 {
+    text-align: center;
+}
+
+.active>a {
+    color: rgb(17, 102, 105);
+}
+
+.content-box {
+    font-size: 25px;
+    font-family: Montserrat;
+    height: 100vh;
+    margin-left: 30px;
+}
+
+
+/* Tag-specific */
+
+.item {
+    position: absolute;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 1vw;
+    font-weight: bold;
+    color: black;
+    transition-property: font-size, color;
+    transition-duration: 0.45s;
+}
+
+p {
+    font-family: Montserrat;
+}
+
+
+/* id-specific */
+
+#active-elem-highlighter {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    /* border-width: 1px; */
+    /* border-style: solid; */
+    margin-left: 20%;
+    border-radius: 20px 0px 0px 20px;
+    transition-duration: 0.45s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.2);
+}
+
+#above {
+    content: "";
+    position: absolute;
+    display: block;
+    background: white;
+    width: 1em;
+    height: 1em;
+    top: -1em;
+    right: 0;
+}
+
+#below {
+    content: "";
+    position: absolute;
+    display: block;
+    background: white;
+    height: 1em;
+    width: 1em;
+    bottom: -1em;
+    right: 0;
+}
+
+#above::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: lightblue;
+    height: 200%;
+    width: 200%;
+    top: -100%;
+    left: -100%;
+    border-radius: 100%;
+}
+
+#below::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: lightblue;
+    height: 200%;
+    width: 200%;
+    left: -100%;
+    border-radius: 100%;
+}
