@@ -2,8 +2,9 @@
 
 :root {
     --fc-primary: rgba(21, 233, 162, 0.438);
-    --col-primary: rgba(17, 188, 194, 0.952);
-    --bg-color: rgb(255, 255, 255);
+    --col-primary: rgb(17, 188, 194);
+    --bg-color: white;
+    --head-font-size: 5.5rem;
 }
 
 * {
@@ -13,6 +14,10 @@
     /* border-width: 1px; */
     /* border-style: solid; */
     /* border-color: rgb(49, 232, 245); */
+}
+
+body {
+    background: var(--bg-color);
 }
 
 
@@ -65,8 +70,12 @@
     grid-column-start: 2;
 }
 
-.active>a {
-    color: rgb(17, 102, 105);
+.sidenav-element>span:not(.active) {
+    color: rgb(236, 234, 234);
+}
+
+.sidenav-element.active>span {
+    color: rgb(32, 121, 124);
 }
 
 .content-box {

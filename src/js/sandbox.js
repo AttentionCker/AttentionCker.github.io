@@ -42,11 +42,10 @@ function sidenavbar() {
 }
 
 $(".active-nav-item-onscroll").scroll(function() {
-    let scrollDistance = $(".active-nav-item-onscroll").scrollTop();
-    let vh = $(window).height();
-    let i = Math.round(scrollDistance / vh);
-    console.log(i);
     if (scrollAnimEnabled) {
+        let scrollDistance = $(".active-nav-item-onscroll").scrollTop();
+        let vh = $(window).height();
+        let i = Math.round(scrollDistance / vh);
         $(".sidenav-element.active").removeClass("active");
         $(".sidenav-element").eq(i).addClass("active");
         let activeElement = $(".sidenav-element.active");
@@ -62,10 +61,20 @@ $(".active-nav-item-onscroll").scroll(function() {
 });
 
 
+let temp_view_func = function() {
+    let e = document.querySelector(".active");
+    // console.log(e.getAttribute("href"));
+    document.querySelector(e.getAttribute("href")).scrollIntoView();
+};
+
 $(document).ready(function() {
     sidenavbar();
-    var callbacks = $.Callbacks();
+    temp_view_func();
+    displaySkillsElements();
 });
+
+
+
 
 $(window).resize(function() {
     sidenavbar();
