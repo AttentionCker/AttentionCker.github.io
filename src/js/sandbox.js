@@ -70,9 +70,13 @@ let temp_view_func = function() {
 $(document).ready(function() {
     sidenavbar();
     temp_view_func();
-    displaySkillsElements();
 });
 
+setInterval(function() {
+    if ($(".active").attr("href") == "#skills") {
+        displaySkillsElements();
+    }
+}, 1000);
 
 
 

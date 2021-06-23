@@ -5,7 +5,7 @@
     display: grid;
     padding: 2rem;
     grid-template-rows: repeat(3, 1fr);
-    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-auto-flow: row;
     &>div {
         // border: 1px solid;
@@ -21,6 +21,13 @@
             align-self: center;
             img {
                 height: var(--img-size);
+                visibility: hidden;
+                &.animate-skill {
+                    visibility: visible;
+                    animation-name: skilliconanim;
+                    animation-duration: 0.8s;
+                    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+                }
             }
         }
         &#top-hori {
@@ -46,7 +53,7 @@
             gap: 2rem;
         }
     }
-    &>span#center-text {
+    &>span#skills-head {
         border-style: double;
         border-color: var(--col-primary);
         border-width: 0.8rem;
@@ -64,4 +71,24 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+@keyframes skilliconanim {
+    0% {
+        transform: scale(0.0);
+    }
+    90% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
 }

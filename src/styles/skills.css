@@ -3,6 +3,7 @@
   display: grid;
   padding: 2rem;
   grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: row; }
   #skills > div {
     position: relative; }
@@ -15,7 +16,13 @@
       justify-self: center;
       align-self: center; }
       #skills > div > div img {
-        height: var(--img-size); }
+        height: var(--img-size);
+        visibility: hidden; }
+        #skills > div > div img.animate-skill {
+          visibility: visible;
+          animation-name: skilliconanim;
+          animation-duration: 0.8s;
+          animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1); }
     #skills > div#top-hori {
       grid-column-end: span 3;
       display: grid;
@@ -34,7 +41,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem; }
-  #skills > span#center-text {
+  #skills > span#skills-head {
     border-style: double;
     border-color: var(--col-primary);
     border-width: 0.8rem;
@@ -51,5 +58,18 @@
     animation: gradient 10s ease infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+
+@keyframes skilliconanim {
+  0% {
+    transform: scale(0); }
+  90% {
+    transform: scale(1.05); }
+  100% {
+    transform: scale(1); } }
+.hidden {
+  visibility: hidden; }
+
+.visible {
+  visibility: visible; }
 
 /*# sourceMappingURL=skills.css.map */
