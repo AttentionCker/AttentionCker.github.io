@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/about.css">
     <link rel="stylesheet" href="../styles/skills.css">
+    <link rel="stylesheet" href="../styles/projects.css">
     <link rel="stylesheet" href="../styles/contact.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Montserrat|Fredoka One|Balsamiq Sans|Poiret One">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -34,9 +35,9 @@
                     <!-- about me --></span></a>
             <a href="#skills" class="sidenav-element"><span class="item"><i class="fas fa-tools fa-lg"></i>
                     <!-- skills --></span></a>
-            <a href="#projects" class="sidenav-element"><span class="item"><i class="fas fa-list-ul fa-lg"></i>
+            <a href="#projects" class="sidenav-element active"><span class="item"><i class="fas fa-list-ul fa-lg"></i>
                     <!-- projects --></span></a>
-            <a href="#contact" class="sidenav-element active"><span class="item"><i class="fas fa-paper-plane fa-lg"></i>
+            <a href="#contact" class="sidenav-element"><span class="item"><i class="fas fa-paper-plane fa-lg"></i>
                     <!-- contact me --></span></a>
         </div>
 
@@ -65,7 +66,8 @@
 
             <div id="about" class="snappy-scroll-item content-item">
                 <h1>
-                    ABOUT
+                    About
+                    <br> [Website Building still in progress]
                 </h1>
             </div>
 
@@ -82,30 +84,56 @@
             </div>
 
             <div id="projects" class="snappy-scroll-item content-item ">
-                <h1>
-                    PROJECTS
-                </h1>
+                <span id="projects-head">Projects</span>
+                <div class="cards-container">
+                    <!-- <div class="project-card">
+                        <img class="card_image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Sqh4MQSK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/hzc4hdwc234t7p728i5c.jpg">
+                        <div class="card_text">
+                            <div class="tags">
+                                PyTorch│ML
+                            </div>
+                            <div class="project-title"> PyTorch Image Recognition with Convolutional Networks</div>
+                            <div class="project-desc">
+                                In the last article, we implemented a simple dense network to recognize MNIST images with PyTorch. In this article, we’ll stay with the MNIST recognition task, but this time we’ll use convolutional networks...
+                            </div>
+                        </div>
+                        <div class="card_footer">
+                            <div class="hidden">
+
+                            </div>
+                            <a href="#" class="project-link">
+                                <div>
+                                    Project link
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
             </div>
 
             <div id="contact" class="snappy-scroll-item content-item ">
                 <span id="contact-header">Get In Touch</span>
                 <div id="form-div">
                     <p>Liked my website? or any of my works? Let me know (anonymous admirers are always welcome &#128521;):</p>
-                    <form>
-
-                        <input type="text" id="fname" placeholder="Your name here" class="form-element-borders">
-                        <input type="text" id="email-addr" placeholder="Your email address" class="form-element-borders">
-                        <textarea id="visitor-text-inp-field" name="subject" placeholder="What Do You Want To Tell Me?" class="form-element-borders"></textarea>
-                        <i onclick="send()" class="far fa-paper-plane fa-2x"></i>
-
+                    <form action="https://formspree.io/f/mzbyvpbp" method="POST">
+                        <input id="fname" name="name" type="text" placeholder="Your name here" class="form-element-borders" required="">
+                        <input id="email-addr" type="email" name="_replyto" placeholder="Your email address" class="form-element-borders" required="">
+                        <textarea id="visitor-text-inp-field" name="message" placeholder="What Do You Want To Tell Me?" class="form-element-borders" required=""></textarea>
+                        <button type="submit"><i  class="far fa-paper-plane fa-2x"></i></button>
+                        <input type="hidden" name="_subject" value="New submission!" />
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="../js/sandbox.js"></script>
+
+
+
+    <script type="module" src="../js/sandbox.js"></script>
     <script src="../js/skills.js"></script>
+    <script type="module" src="../js/projects.js"></script>
+    <script type="module" src="../js/projectsCardListItems.js"></script>
     <script src="../js/contact.js"></script>
 
 </html>
