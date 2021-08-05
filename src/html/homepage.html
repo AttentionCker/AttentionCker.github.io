@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>personal.website</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
-    <link rel="stylesheet" href="../styles/about.css">
-    <link rel="stylesheet" href="../styles/skills.css">
-    <link rel="stylesheet" href="../styles/projects.css">
-    <link rel="stylesheet" href="../styles/contact.css">
+
+    <!-- WIDESCREEN STYLES -->
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="../styles/widescreen/style.css">
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="../styles/widescreen/home.css">
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="../styles/widescreen/about.css">
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="../styles/widescreen/skills.css">
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="../styles/widescreen/projects.css">
+    <link rel="stylesheet" media="screen and (min-width:1100px)" href="../styles/widescreen/contact.css">
+
+    <!-- MOBILESCREEN Styles -->
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="../styles/mobile/style.css">
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="../styles/mobile/home.css">
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="../styles/mobile/about.css">
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="../styles/mobile/skills.css">
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="../styles/mobile/projects.css">
+    <link rel="stylesheet" media="screen and (max-width:1100px)" href="../styles/mobile/contact.css">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Montserrat|Fredoka One|Balsamiq Sans|Poiret One">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7d1319d76a.js" crossorigin="anonymous"></script>
@@ -19,8 +31,8 @@
 
 <body>
 
-
-    <div class="main-grid">
+    <!-- desktop site -->
+    <div class="m_invisible main-grid">
 
         <div class="sidenav">
             <div id="active-elem-highlighter">
@@ -43,8 +55,8 @@
 
 
 
-        <div class="content-grid snappy-scroll-container active-nav-item-onscroll">
-            <div id="home" class="snappy-scroll-item content-item">
+        <div class="m_invisible content-grid snappy-scroll-container active-nav-item-onscroll">
+            <div id="home" class="m_invisible snappy-scroll-item content-item">
                 <div id="greet-name">
                     <span id="shadow-on-hover">Hi. I'm Ajay. <br>
                         <span id="designation">
@@ -52,11 +64,8 @@
                         </span>
                     </span>
 
-                    <p id="greet-description-oneliner">
-                        More specifically, a MECHANICAL ENGINEERING STUDENT.
-                        <p id="greet-description">
-                            And I love to build, both software and hardware.
-                        </p>
+                    <p id="greet-description">
+                        And I love to build stuff.
                     </p>
                 </div>
                 <div id="profile-img">
@@ -64,14 +73,14 @@
                 </div>
             </div>
 
-            <div id="about" class="snappy-scroll-item content-item">
+            <div id="about" class="m_invisible snappy-scroll-item content-item">
                 <h1>
                     About
                     <br> [Website Building still in progress]
                 </h1>
             </div>
 
-            <div id="skills" class="snappy-scroll-item content-item">
+            <div id="skills" class="m_invisible snappy-scroll-item content-item">
                 <div id="top-hori">
                 </div>
                 <div id="mid-left">
@@ -83,35 +92,13 @@
                 </div>
             </div>
 
-            <div id="projects" class="snappy-scroll-item content-item ">
+            <div id="projects" class="m_invisible snappy-scroll-item content-item ">
                 <span id="projects-head">Projects</span>
                 <div class="cards-container">
-                    <!-- <div class="project-card">
-                        <img class="card_image" src="https://res.cloudinary.com/practicaldev/image/fetch/s--Sqh4MQSK--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/hzc4hdwc234t7p728i5c.jpg">
-                        <div class="card_text">
-                            <div class="tags">
-                                PyTorch│ML
-                            </div>
-                            <div class="project-title"> PyTorch Image Recognition with Convolutional Networks</div>
-                            <div class="project-desc">
-                                In the last article, we implemented a simple dense network to recognize MNIST images with PyTorch. In this article, we’ll stay with the MNIST recognition task, but this time we’ll use convolutional networks...
-                            </div>
-                        </div>
-                        <div class="card_footer">
-                            <div class="hidden">
-
-                            </div>
-                            <a href="#" class="project-link">
-                                <div>
-                                    Project link
-                                </div>
-                            </a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
-            <div id="contact" class="snappy-scroll-item content-item ">
+            <div id="contact" class="m_invisible snappy-scroll-item content-item ">
                 <span id="contact-header">Get In Touch</span>
                 <div id="form-div">
                     <p>Liked my website? or any of my works? Let me know (anonymous admirers are always welcome &#128521;):</p>
@@ -127,7 +114,53 @@
         </div>
     </div>
 
+    <!-- --------------------------------------------------------------------------------------------------->
 
+    <!-- smartphone-based site -->
+    <div class="w_invisible main-content">
+
+        <div id="m_button-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div id="m_navbar-wrapper">
+            <div id="m_navbar">
+                <a href="#m_home" class="m_navbar-element m_active">
+                    <div class="item">Home</div>
+                </a>
+                <a href="#m_about" class="m_navbar-element">
+                    <div class="item">About Me</div>
+                </a>
+                <a href="#m_skills" class="m_navbar-element">
+                    <div class="item">Skills</div>
+                </a>
+                <a href="#m_projects" class="m_navbar-element">
+                    <div class="item">Projects</div>
+                </a>
+                <a href="#m_contact" class="m_navbar-element">
+                    <div class="item">Contact me</div>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="m_home" class="">
+
+        </div>
+
+        <div id="m_about">
+        </div>
+
+        <div id="m_skills">
+        </div>
+
+        <div id="m_projects">
+        </div>
+
+        <div id="m_contact">
+        </div>
+
+    </div>
 
 
     <script type="module" src="../js/sandbox.js"></script>
@@ -135,5 +168,8 @@
     <script type="module" src="../js/projects.js"></script>
     <script type="module" src="../js/projectsCardListItems.js"></script>
     <script src="../js/contact.js"></script>
+
+    <!-- mobile-js -->
+    <script type="module" src="../js/m_sandbox.js"></script>
 
 </html>
