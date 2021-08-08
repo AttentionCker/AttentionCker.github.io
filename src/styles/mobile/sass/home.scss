@@ -1,0 +1,66 @@
+#m_home {
+    display: grid;
+    grid-auto-flow: row;
+    height: 100vh;
+    grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    text-align: center;
+}
+
+#greet-name {
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: "Poppins";
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#greet-description {
+    max-width: 30rem;
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    font-family: "Poppins";
+    font-weight: lighter;
+}
+
+#profile-img {
+    transform: scale(0.95);
+    margin-top: 5rem;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 2px solid gainsboro;
+    // box-shadow: 10px 10px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    animation: float 8s ease-in-out infinite;
+}
+
+#profile-img>img {
+    position: relative;
+    transform: scale(0.4) translate(-96%, -85%);
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: scale(0.95) translatey(0px);
+    }
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: scale(0.95) translatey(-10px);
+    }
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: scale(0.95) translatey(0px);
+    }
+}

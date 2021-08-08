@@ -1,3 +1,5 @@
+import { m_displaySkillsCards } from "./m_skills.js"
+
 let navbarVisibility = false;
 $("#m_button-toggle").on("click", function() {
     navbarVisibility = !navbarVisibility;
@@ -31,4 +33,9 @@ $("#m_navbar-wrapper").on("click", function() {
 $(".m_navbar-element").on("click", function() {
     $(".m_active").removeClass("m_active");
     $(this).addClass("m_active");
-})
+});
+
+$(document).ready(function() {
+    console.log("doc-ready");
+    m_displaySkillsCards();
+});

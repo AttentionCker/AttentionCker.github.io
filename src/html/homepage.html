@@ -117,9 +117,9 @@
     <!-- --------------------------------------------------------------------------------------------------->
 
     <!-- smartphone-based site -->
-    <div class="w_invisible main-content">
+    <div class="w_invisible main-content m_onscroll">
 
-        <div id="m_button-toggle">
+        <div id="m_button-toggle" class="m_grad-text">
             <i class="fas fa-bars"></i>
         </div>
 
@@ -146,18 +146,61 @@
 
         <div id="m_home" class="">
 
+            <div id="profile-img">
+                <img src="../../imgs/profile-img.jpg" alt="That's What I look Like, at least when the world would be grayscale">
+            </div>
+            <div id="greet-name" class="m_grad-text">
+                <span>Hi. I'm Ajay. <br>
+                    <span id="designation">
+                        An Engineer.
+                    </span>
+                </span>
+                <p id="greet-description">
+                    And I love to build stuff.
+                </p>
+            </div>
         </div>
 
         <div id="m_about">
+            <h1 class="m_grad-text">
+                ABOUT
+            </h1>
+            <p style="color:red;"><br> [Website Building still in progress]</p>
         </div>
 
         <div id="m_skills">
+            <h1 id="m_skills-head" class="m_grad-text">
+                SKILLS
+            </h1>
+
+            <div id="m_skills-cards-wrapper">
+            </div>
+
+
         </div>
 
         <div id="m_projects">
+            <h1 id="m_projects-head" class="m_grad-text">
+                PROJECTS
+            </h1>
+            <div class="cards-container">
+            </div>
         </div>
 
         <div id="m_contact">
+            <h1 id="m_contact-head" class="m_grad-text">
+                Get In Touch
+            </h1>
+            <div id="form-div">
+                <p>Liked my website? or any of my works? Let me know (anonymous admirers are always welcome &#128521;):</p>
+                <form action="https://formspree.io/f/mzbyvpbp" method="POST">
+                    <input id="fname" name="name" type="text" placeholder="Your name here" class="form-element-borders" required="">
+                    <input id="email-addr" type="email" name="_replyto" placeholder="Your email address" class="form-element-borders" required="">
+                    <textarea id="visitor-text-inp-field" name="message" placeholder="What Do You Want To Tell Me?" class="form-element-borders" required=""></textarea>
+                    <button type="submit"><i  class="far fa-paper-plane fa-2x"></i></button>
+                    <input type="hidden" name="_subject" value="New submission!" />
+                </form>
+            </div>
         </div>
 
     </div>
@@ -171,5 +214,8 @@
 
     <!-- mobile-js -->
     <script type="module" src="../js/m_sandbox.js"></script>
+    <script type="module" src="../js/m_skills.js"></script>
+    <script type="module" src="../js/m_skillsCardsListItems.js"></script>
+
 
 </html>

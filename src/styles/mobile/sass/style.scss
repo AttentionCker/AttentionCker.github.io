@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Poppins;
+    // scroll-behavior: smooth;
 }
 
 :root {
@@ -15,7 +17,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
@@ -24,6 +26,7 @@
 }
 
 #m_navbar-wrapper {
+    z-index: 3;
     position: fixed;
     height: 100vh;
     background: rgba(17, 188, 194, 0.94);
@@ -61,6 +64,7 @@
     right: 25px;
     bottom: 30px;
     font-size: 2rem;
+    color: rgb(12, 92, 95);
 }
 
 #m_navbar>a {
@@ -70,4 +74,23 @@
     &.m_active {
         color: rgb(12, 92, 95);
     }
+}
+
+.m_grad-text {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }

@@ -1,0 +1,36 @@
+#m_skills-head {
+  text-align: center; }
+
+#m_skills {
+  padding-top: 5vh;
+  min-height: 100vh; }
+
+#m_skills-cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: left;
+  padding-top: 5vh;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+.m_skill-item-card {
+  display: flex;
+  max-width: 40vw;
+  border: 2px solid rgba(9, 87, 97, 0.7);
+  border-radius: 15px;
+  margin: 4px 5px;
+  padding: 3px;
+  padding-left: 7px;
+  height: 50px;
+  align-items: center;
+  left: 0px; }
+  .m_skill-item-card:hover {
+    box-shadow: none; }
+  .m_skill-item-card > img {
+    height: 100%; }
+  .m_skill-item-card > .m_skill-item-name {
+    margin: 10px;
+    font-size: 0.6rem;
+    font-weight: bold; }
+
+/*# sourceMappingURL=skills.css.map */

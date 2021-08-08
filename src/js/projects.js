@@ -24,12 +24,15 @@ function createProjectCardhtml(e) {
 export function displayProjectCards() {
 
     let projectCardsContainer = $("#projects>.cards-container");
+    let m_projectCardsContainer = $("#m_projects>.cards-container");
 
     projectsItemsList.forEach(function(e) {
         let innerHtmlStrValue = createProjectCardhtml(e);
         projectCardsContainer.append(innerHtmlStrValue);
+        m_projectCardsContainer.append(innerHtmlStrValue);
     });
 
     projectCardsContainer.append(`<div id="after-last-card" class="project-card"></div>`);
+    m_projectCardsContainer.append(`<div id="after-last-card" class="project-card"></div>`);
 
 }
