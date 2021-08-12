@@ -1,10 +1,34 @@
-#about {
+#about-head {
+    font-size: 10rem;
+    text-align: center;
+}
+
+#read-caution {
+    font-size: 1rem;
     position: relative;
-    &>h1 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: red;
+    top: -3rem;
+    text-align: center;
+}
+
+.about-section {
+    margin: 2rem 10% 0 10%;
+    font-size: 1.2rem;
+    text-align: justify;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@media screen and (max-width: 1300px) {
+    .about-section {
+        font-size: 1rem;
     }
 }

@@ -73,18 +73,18 @@ $(".m_onscroll").scroll(function() {
     }
 });
 
-/* 
+
 let temp_view_func = function() {
     let e = document.querySelector(".active");
     // console.log(e.getAttribute("href"));
     document.querySelector(e.getAttribute("href")).scrollIntoView();
-}; */
+};
 
 $(document).ready(function() {
     console.log("ready");
     sidenavbar();
     displayProjectCards();
-    // temp_view_func();
+    temp_view_func();
 });
 
 setInterval(function() {
