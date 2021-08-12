@@ -3,3 +3,36 @@
     padding-top: 5vh;
     min-height: 100vh;
 }
+
+#m_about-head {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#m_read-caution {
+    font-size: 0.2rem;
+    text-align: center;
+}
+
+.about-section {
+    margin: 2rem 10% 0 10%;
+    font-size: 0.63em !important;
+    text-align: justify;
+    background: linear-gradient(-45deg, #23a6d5, #23d5ab);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+@media screen and (max-width: 1300px) {
+    .about-section {
+        font-size: 1rem;
+    }
+}
