@@ -84,7 +84,7 @@ $(document).ready(function() {
     console.log("ready");
     sidenavbar();
     displayProjectCards();
-    temp_view_func();
+    // temp_view_func();
 });
 
 setInterval(function() {
